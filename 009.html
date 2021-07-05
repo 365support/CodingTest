@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //지역변수 전역변수(어디서나 사용가능)
+      var z = 100;
+      function sum(x){//x는 매개변수(parameter)이면서 지역변수(local val))
+        let y = 50; //변수 선언 y는 지역변수
+        z = z + y;
+        return x + y;
+      }
+      document.write(sum(10)); //60, 10은 전달인자(argument)
+      document.write('<br>');
+    //  document.write(x, y); // 출력되지 않음 x와 y는 지역변수 함수밖으로 나가지 못함
+      document.write(z); // 150 변수의 위치가 함수밖에 있기때문에 어디서나 사용가능한 전역변수
+
+    </script>
+  </body>
+</html>

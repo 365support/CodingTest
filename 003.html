@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>할당연산, 증감연산과 template literal</h1>
+    <script>
+      //연산
+
+      var x, y, z;
+      x = 5;
+      y = 9;
+      y++; // 10 y를 하나 증가
+      x--; // 4  x를 하나 감소
+      --x; //3
+      ++x; //4
+      x = x+2; //6 밑과 동일한 효과
+      x += 2; //8 할당연산제 x의 중복을 없애기 위해
+      document.write(x, '<br>');
+      x *= 2; //16
+      document.write(x);
+
+      //template literal `` 1옆 작은따옴표와 비슷하게 생긴 것
+      // 띄어쓰기 허용 br태그 대신 쉽게 쓸수있다 ${}안에서의 연산도 허용
+      var 이름 = '이호준';
+      var 나이 = '10';
+
+      document.write(`제 이름은 ${이름}입니다. 제 나이는 ${나이+나이}입니다.`)
+    </script>
+  </body>
+</html>

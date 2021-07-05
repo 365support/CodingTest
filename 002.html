@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>변수들의 연산</h1>
+    <script>
+      //변수
+
+      //문자와 숫자, 기호$와 _만 사용
+      //첫 글자가 숫자가 될 수 없음
+      //대소문자 구별, 예약어 사용불가
+
+      var 변수하나 = 20;
+      var 변수둘 = 10;
+      var 변수셋 = 2;
+
+      document.write(변수하나);
+      document.write('<br>');
+      document.write(변수둘);
+      document.write('<br>');
+      document.write('변수하나+변수둘 : ', 변수하나+변수둘);
+      // 문자열로 실행, 숫자로 실행
+      // + - / * ** %
+
+      document.write('<br>');
+      document.write('변수하나-변수둘 : ', 변수하나-변수둘);
+      document.write('<br>');
+      document.write('변수하나/변수둘 : ', 변수하나/변수둘);
+      document.write('<br>');
+      document.write('변수하나*변수둘 : ', 변수하나*변수둘);
+      document.write('<br>');
+      document.write('변수하나**변수셋 : ', 변수하나**변수셋);
+      document.write('<br>');
+      document.write('변수하나%변수셋 : ', 변수하나%변수셋);
+      //나머지값을 실행 %
+      document.write('<br>');
+      //ES6
+      const 이름 = '이호준';
+      const 소속 = "제주코딩베이스캠프 운영진";
+      //변하지 않을 것 같은 변수에 사용
+
+      let 주소 = '서울';
+      주소 = '제주';
+      //변할수 있는 변수에 사용 한번 선언후에는 쓰지않아도 됨
+
+      document.write(이름, '<br>');
+      document.write(소속, '<br>');
+      document.write(주소, '<br>');
+
+      document.write(소속[2], '<br>');
+      document.write(소속[3], '<br>');
+      // 숫자형은 순서를 따지지 않지만 문자형은 숫자를 따진다
+      // 제:0 주:1 코:2 딩:3 이런식으로 출력하고자 하는 문자의 숫자를 넣으면
+      // 그 문자만 출력이 된다
+
+      // const, let, var의 차이점은 나중에 알아보자
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>논리연산</h1>
+    <script>
+      //논리연산 and, or, not
+      // and = 곱, or = 합
+      // true = 1 , false = 0
+
+//or 연산 ||사용
+      document.write(`true || true : ${true || true} <br>`); // 1+1=2지만 0이외의 숫자는 전부 true
+      document.write(`true || false : ${true || false} <br>`);
+      document.write(`false || true : ${false || true} <br>`);
+      document.write(`false || false : ${false || false} <br>`);
+      //둘 중 하나만 true라면 true인것을 알 수 있다
+
+//and연산 &&사용
+      document.write(`true && true : ${true && true} <br>`); // 1*1=1 이므로 true
+      document.write(`true && false : ${true && false} <br>`);
+      document.write(`false && true : ${false && true} <br>`);
+      document.write(`false && false : ${false && false} <br>`);
+      // 0곱하기0은 0이기 떄문에 둘 중 하나만 0이라면 0이된다
+      // 두 값이 모두 true일때 true를 반환한다
+
+
+//not연산 !사용
+      document.write(`!true: ${!true} <br>`); // true의 반대
+      document.write(`!false : ${!false} <br>`);
+
+      let x = 10
+      document.write(`true && true : ${true && true} <br>`);
+
+
+    </script>
+
+
+  </body>
+</html>

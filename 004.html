@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>비교연산</h1>
+    <script>
+      var x, y;
+      x = 10;
+      y = 20;
+      z = '10' //따옴표로 묶여있으면 문자열
+
+      document.write(x > y, '<br>'); //false 불리언 자료형
+      document.write(x < y, '<br>'); //true
+      document.write(x >= y, '<br>');
+      document.write(x >= y, '<br>');
+
+      document.write(`${x > y} <br>`); //false 불리언 자료형
+
+//x,y가 같냐
+      document.write(`x == z : ${x == z} <br>`); // 숫자 10과 문자10이 같다 type은 구별안함
+      document.write(`x === y : ${x === y} <br>`); // 숫자 10과 문자10은 다르다 type구별
+//x,y가 다르냐
+      document.write(`x != y : ${x != y} <br>`);
+      document.write(`x != 10 : ${x != 10} <br>`);
+
+    </script>
+  </body>
+</html>

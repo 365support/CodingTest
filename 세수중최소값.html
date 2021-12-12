@@ -6,11 +6,15 @@
     <body>
         <script>
             function solution(a, b, c){
-                let answer;
-                if(a<b) answer=a;
-                else answer=b;
-                if(c<answer) answer=c; 
-                return answer;
+                // a 를 최소값으로 설정  
+                // a 랑 b비교 , a c  비교
+                let small = a;
+                if(a > b){
+                    small = b
+                }else if(a > c){
+                    small = c
+                }
+                return small;
             }
 
             console.log(solution(2, 5, 1));

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+      <script>
+          function solution(s){
+            // 배열을 만든 뒤 사용하면 된다 
+            // 여는괄호를 만났을때 스택에 넣어주고 
+            // 닫는 괄호를 만났을때 스택에서 빼주면 된다
+            // 정상적인 괄호는 마지막에 스택에 아무것도 없어야 한다 
+            let answer = "YES";
+            stack = []
+            for(let x of s){
+              if(x === '('){
+                stack.push(x)
+              }else{
+                if(stack.length===0){
+                  return "NO"
+                }
+                stack.pop()
+              }
+            }
+            return answer;
+          }
+          
+          let a="(()(()))(()";
+          console.log(solution(a));
+      </script>
+    </body>
+</html>

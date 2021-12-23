@@ -5,8 +5,28 @@
     </head>
     <body>
         <script>
+            // 첫째 줄에 홀수들의 합을 출력하고, 둘째 줄에 홀수들 중 최소값을 출력한다.
+            // 홀수를 먼저 찾는다
+            // 홀수의 합, 최소값 출력
             function solution(arr){
+                let result = []
+                let sum = 0
+                let min = 999999999;
+                for(let i = 0; i < arr.length; i++){
+                    if(arr[i] % 2 !== 0){
+                        result.push(arr[i])
+                    }
+                }
+                console.log(result)
 
+                for(let i = 0; i < result.length; i++){
+                    sum = sum + result[i]
+                    if(result[i] < min){
+                        min = result[i]
+                    }
+                }
+                return sum +'\n' + min
+                
             }
             
             arr=[12, 77, 38, 41, 53, 92, 85];

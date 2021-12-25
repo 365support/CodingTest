@@ -9,24 +9,36 @@
             // 홀수를 먼저 찾는다
             // 홀수의 합, 최소값 출력
             function solution(arr){
-                let result = []
-                let sum = 0
-                let min = 999999999;
-                for(let i = 0; i < arr.length; i++){
-                    if(arr[i] % 2 !== 0){
-                        result.push(arr[i])
-                    }
-                }
-                console.log(result)
+                // let result = []
+                // let sum = 0
+                // let min = 999999999;
+                // for(let i = 0; i < arr.length; i++){
+                //     if(arr[i] % 2 !== 0){
+                //         result.push(arr[i])
+                //     }
+                // }
+                // console.log(result)
 
-                for(let i = 0; i < result.length; i++){
-                    sum = sum + result[i]
-                    if(result[i] < min){
-                        min = result[i]
+                // for(let i = 0; i < result.length; i++){
+                //     sum = sum + result[i]
+                //     if(result[i] < min){
+                //         min = result[i]
+                //     }
+                // }
+                // return sum +'\n' + min
+                
+                // 안에서 한번에 가능하도록 코드 짜는 방법도 있음
+                let answer=[];
+                let sum=0, min=1000;
+                for(let x of arr){
+                    if(x%2===1){
+                        sum+=x;
+                        if(x<min) min=x;
                     }
                 }
-                return sum +'\n' + min
-                
+                answer.push(sum);
+                answer.push(min);     
+                return answer;
             }
             
             arr=[12, 77, 38, 41, 53, 92, 85];

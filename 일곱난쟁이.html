@@ -17,8 +17,10 @@
               // 얕은 복사를 했기 때문에 arr에 변화를 주면 answer도 같이 변한다 
               let sum = arr.reduce((a,b) => a+b, 0) 
 
-              for(let i = 0; i < arr.length; i++){
-                for(let j = 1; j < arr.length-1; j++){
+              for(let i = 0; i < arr.length-1; i++){
+                // i 는 마지막에 8-13 이렇게 비교할 것이기 때문에 끝까지 돌 필요 없다 
+                for(let j = i+1; j < arr.length; j++){
+
                   if(sum - (arr[i]+arr[j]) === 100){
                     arr.splice(j,1)
                     arr.splice(i,1)

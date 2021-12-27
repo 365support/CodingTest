@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="";
+                for(let x of s){
+                  if(x === 'A'){
+                    answer += '#'
+                  }else{
+                    answer += x
+                  }
+                }
+                return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+
+
+<!-- <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer=s;
+                answer=answer.replace(/A/g, "#");
+                return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html> -->
+
+<!-- 
+replace() 메서드는 어떤 패턴에 일치하는 일부 또는 
+모든 부분이 교체된 새로운 문자열을 반환
+
+replace() 함수는
+문자열에서 변경하려는 문자열이 여러 번 반복될 경우,
+첫 번째로 발견한 문자열만 치환해 준다
+
+모든 텍스트를 바꾸기 위해서는 str_text.replace(/찾을 문자열/gi, "변경할 문자열")
+정규표현식을 사용해야 한다 
+
+
+정규식으로 찾으려는 문자열은 '/'로 감싸서, 파라미터로 들어가는 값이 정규식 임을 알려줌
+그리고, '/' 뒤에는 'g'라는 modifier를 붙여줌
+g는 'global match'라는 의미로 사용
+뒤에 i를 붙이면 대소문자 구분없이 변환하라는 의미!
+
+
+-->

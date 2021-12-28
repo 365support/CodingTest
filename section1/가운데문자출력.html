@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+          // 단어의 길이가 짝수 일때는 중간 문자 2개 출력
+            function solution(s){  
+              // 길이를 먼저 구하자
+                let answer;
+                let mid = Math.floor(s.length/2) // 소수점 버림
+                // 홀수(글자의 길이)를 2로 나눴을때 나오는 값이 가운데 인덱스 값이다 
+                // t e a c h e r  7 / 2 = 3
+                // 0 1 2 3 4 5 6 
+
+                // 짝수(글자의 길이)를 2로 나눴을때 나오는 값이 중간인덱스 + 1
+                // g o o d   4 / 2 = 2
+                // 0 1 2 3
+
+                if(s.length % 2 === 1){
+                  answer = s.substring(mid, mid+1) // mid 부터 mid+1 앞까지 출력 
+                }
+                if(s.length % 2 === 0){
+                  answer = s.substring(mid-1, mid+1) // mid-1 부터 mid+1 앞까지 출력
+                }
+                return answer;
+            }
+            console.log(solution("stuudy"));
+        </script>
+    </body>
+</html>

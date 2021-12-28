@@ -8,11 +8,11 @@
             function solution(s){
                 let answer="";
                 for(let x of s){
-                  if(x === 'A'){
+                    if(x === 'A'){
                     answer += '#'
-                  }else{
+                    }else{
                     answer += x
-                  }
+                    }
                 }
                 return answer;
             }
@@ -36,6 +36,8 @@
                 let answer=s;
                 answer=answer.replace(/A/g, "#");
                 return answer;
+                // 문자열은 주소 참조가 아닌 값이 복사된다 
+                // answer를 조작해도 s값이 변화되지는 않는다 
             }
             
             let str="BANANA";

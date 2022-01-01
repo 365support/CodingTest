@@ -6,15 +6,24 @@
     <body>
         <script>
             function solution(s){  
+                // let answer
+                // answer = s.filter((v, i) => {
+                //   // 콜백함수의 내부
+                //   if(s.indexOf(v) === i){
+                //     return true
+                //     // return v
+                //     // 참이 나오는 요소만 새로운 배열로 만들어서 리턴 해준다 
+                //   }
+                // });
+
+                // 아예 아래처럼 줄여서 쓰는것도 가능하다 
                 let answer
                 answer = s.filter((v, i) => {
                   // 콜백함수의 내부
-                  if(s.indexOf(v) === i){
-                    return true
-                    // return v
+                  return s.indexOf(v) === i;
                     // 참이 나오는 요소만 새로운 배열로 만들어서 리턴 해준다 
-                  }
                 });
+                
 
                 // let answer = [];
                 // for(let i = 0; i < s.length; i++){

@@ -6,19 +6,22 @@
     <body>
         <script>
             function solution(s){  
-                let answer = [];
-                // answer = s.filter((v, i) => {
-                //   // 콜백함수의 내부
-                //   if(s.indexOf(v) === i){
-                //     return v
-                //   }
-                // });
-
-                for(let i = 0; i < s.length; i++){
-                  if(s.indexOf(s[i]) === i){
-                    answer.push(s[i])
+                let answer
+                answer = s.filter((v, i) => {
+                  // 콜백함수의 내부
+                  if(s.indexOf(v) === i){
+                    return true
+                    // return v
+                    // 참이 나오는 요소만 새로운 배열로 만들어서 리턴 해준다 
                   }
-                }
+                });
+
+                // let answer = [];
+                // for(let i = 0; i < s.length; i++){
+                //   if(s.indexOf(s[i]) === i){
+                //     answer.push(s[i])
+                //   }
+                // }
                 return answer;
             }
             let str=["good", "time", "good", "time", "student"];

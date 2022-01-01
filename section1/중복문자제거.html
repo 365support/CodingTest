@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+              let answer = ""
+              for(let i = 0; i < s.length; i++){
+                if(s.indexOf(s[i]) === i){
+                  answer += s[i]
+                }
+              }
+              return answer
+            }
+            console.log(solution("ksekkset"));
+        </script>
+    </body>
+</html>
+
+<!-- 
+  s.indexOf('k') -> 0
+  k라는 문자를 처음 발견하는 인덱스를 리턴해 준다 
+  s.indexOf('k', 1)
+  뒤에 인자를 하나 더 추가 할 수 있는데 1번 인덱스 이후로 찾으라는 뜻이다 
+  만약 없는 문자를 넣게 되면 -1을 리턴한다 
+
+
+-->

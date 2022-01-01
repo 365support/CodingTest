@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer;
+                answer = s.filter((v, i) => {
+                  // 콜백함수의 내부
+                  if(s.indexOf(v) === i){
+                    return v
+                  }
+                });
+                return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+<!-- 
+  고차 함수 
+  함수의 인자로 함수를 전달 받는것 / 전달되는 함수를 콜백함수라고 한다
+  s.filter() 괄호 안에 들어가는 함수가 콜백 함수로 
+  s배열의 요소 하나하나씩 반복하며 filter의 매개변수로 계속 전달된다
+  
+-->

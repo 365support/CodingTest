@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){         
+              // 앞에 서 있는 사람들보다 크면 보이고, 작거나 같으면 보이지 않습니다.
+              let answer = 1;
+              let min = arr[0];
+              // 최소값을 arr[0]번째로 해놓은 뒤 arr[0] 보다 큰 값만 answer++
+              for(let i = 1; i < arr.length; i++){
+                if(min < arr[i]){
+                  answer++
+                  min = arr[i]
+                }
+              }
+              return answer;
+            }
+
+            let arr=[130, 135, 148, 140, 145, 150, 150, 153];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

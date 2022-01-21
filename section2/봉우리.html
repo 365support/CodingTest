@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){  
+              let answer=0;
+              let n = arr.length
+              let dx = [-1, 0, 1, 0]; // 행에 더했을때 상하좌우 위치로 갈 수있다
+              let dy = [0, 1, 0, -1]; // 열에 더했을때 상하좌우 위치로 갈 수있다
+              for(let i = 0; i < n; i++){
+                for(let j = 0; j < n; j++){
+                    let flag = 1; // 봉우리임
+                  for(let k = 0; k < 4; k++){
+                    let nx = i+dx[k] // 가려고 하는 행 좌표
+                    let ny = j+dy[k] // 가려고 하는 열 좌표
+                    if(nx>=0 && nx< n && ny>=0 && ny<n && arr[nx][ny] >= arr[i][j] ){
+                      // 사방이 0으로 초기화된 격자가 있기 때문에 그곳은 탐색하면 안된다 
+                      flag = 0; // 봉우리가 아니면 봉우리가 아니라고 표시해주고 그냥 포문 끝냄
+                      break;
+                    }
+                  }
+                  // 포문을 나와서도 봉우리이면 answer++
+                  if(flag){
+                    answer++
+                  }
+                }
+              }
+              return answer;
+            }
+
+            let arr=[[5, 3, 7, 2, 3], 
+                    [3, 7, 1, 6, 1],
+                    [7, 2, 5, 3, 4],
+                    [4, 3, 6, 4, 1],
+                    [8, 7, 3, 5, 2]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

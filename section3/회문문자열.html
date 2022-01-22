@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+          // 앞에서 읽을때나 뒤에서 읽을때 문자열이 같아야 한다 
+          // s의 길이 /2 한 만큼 돌아야 되고 
+          // s[0] === s.length-1 [4]
+          // s[1] === s.length-2 [3]
+            function solution(s){
+              let m = s.length
+              let n = Math.floor(s.length/2)
+              console.log(m)
+              console.log(n)
+              for(let i = 0; i < n; i++){
+                if(s[i] !== s[m-i-1]){
+                  return 'NO'
+                }
+            }
+            return 'YES'
+          }
+            let str="gosoog";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

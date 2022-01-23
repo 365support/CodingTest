@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+          // 알파벳 이외 무시
+            function solution(s){
+              let result = 'YES';
+              let newStr = s.toLowerCase().replace(/[^a-z]/g, ''); // a-z이외의 것들은 빈문자열로 변경
+              console.log(newStr)
+              if(newStr.split('').reverse().join('') !== newStr){
+                return 'NO';
+              }
+              return result;
+            }
+            
+            let str="found7, time: stdudy; Yduts; emit, 7Dnuof";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

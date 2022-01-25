@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+          // 문자 안에 e의 위치가 얼마나 떨어져 있는가
+          // 앞으로 한번 뒤로 한번 포문을 돌아서 e의 위치를 알아내야 한다
+          // 문자열의 길이보다 크게 변수 p를 1000으로 설정해놓은뒤 e가 아니면 +1 , e 이면 0으로 리셋  -> answer에 push
+            function solution(s, t){
+                let answer=[];
+                let p = 1000
+                // 오른쪽으로 포문
+                for(let x of s){
+                  if(x === t){
+                    p = 0;
+                    answer.push(p)
+                  }else{
+                    p++
+                    answer.push(p)
+                  }
+                }
+                // 왼쪽으로 포문
+                p = 1000;
+                for(let i = s.length-1; i >= 0; i--){
+                  if(s[i] === t){
+                    p = 0
+                  }else{
+                    p++
+                    answer[i] = Math.min(answer[i], p)
+                  }
+                }
+                return answer;
+            }
+            
+            let str="teachermode";
+            // answer = 1001, 0, 1, 2, 3, 0, 1, 2, 3, 4, 0  왼쪽에서 e 가 떨어진 거리
+            // answer =   1, 0, 3, 2, 1, 0, 4, 3, 2, 1, 0 오른쪽에서 e가 떨어진 거리
+            // 둘 중에 작은 값으로 교체해 출력하면 된다 
+            console.log(solution(str, 'e'));
+            // 10121012210 출력예제
+        </script>
+    </body>
+</html>

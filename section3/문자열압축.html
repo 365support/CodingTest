@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+          // 같은 문자가 반복될 때 바로 오른쪽에 반복횟수 표기
+          // 반복횟수가 1일때는 숫자 생략
+          // s[1]와 같은 문자가 있는 곳까지 돌면서 문자가 같으면 카운트++
+            function solution(s){
+                let answer="";
+                let count = 1;
+                for(let i = 0; i < s.length; i++){
+                  if(s[i] === s[i+1]){
+                    count++; 
+                    // 같을때는 카운트만 올려주고
+                  }else{
+                    // 같지 않을 때 answer에 누적해준다  
+                    answer += s[i];
+                    if(count > 1){
+                      answer += count;
+                    }
+                    count = 1;
+                  }
+                }
+                return answer;
+            }
+            
+            let str="KKHSSSSSSSE";
+            console.log(solution(str));
+            // 출력 K2HS7E
+        </script>
+    </body>
+</html>
